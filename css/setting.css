@@ -2,6 +2,7 @@
     --feature-color:rgb(78, 78, 78);
     --slider-thumb-background-color-opaHaf:rgba(36, 36, 36,.5);
     --slider-thumb-background-color-opa1:rgba(36, 36, 36,1);
+    --footer-background-color:rgb(112, 118, 131);
 }
 @font-face {
     font-family: mrt-barlow;

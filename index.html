@@ -11,7 +11,37 @@
     <link rel="stylesheet" href="./css/home-header-css-sd.css">
     <link rel="stylesheet" href="./css/home-header-css-ld.css">
     <style>
-        
+        @media(max-width:967px){
+            footer{
+                background-color: var(--footer-background-color);
+                height: 30rem;
+                font-family: mrt-barlow,sans-serif;
+            }
+            .footer-inner{
+                width: 90%;
+                height: 90%;
+                margin: 5% 5%;
+                background-color: brown;
+            }
+        }
+        /*********************************************/
+        @media(min-width:968px){
+            footer{
+                background-color: var(--footer-background-color);
+                height: 25rem;
+                font-family: mrt-barlow,sans-serif;
+                position: relative;
+            }
+            .footer-inner{
+                width: 90%;
+                height: 90%;
+                /* background-color: brown; */
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                transform: translate(-50%,-50%);
+            }
+        }
        
        
     </style>
@@ -40,7 +70,18 @@
             </figure>
         </section>
     </header>
-    <main></main>
-    <footer></footer>
+    <main>
+        <br><br><br><br><br><br><br><br><br><br><br><br>
+        <br><br><br><br><br><br><br><br><br><br><br><br>
+        <br><br><br><br><br><br><br><br><br><br><br><br>
+        <br><br><br><br><br><br><br><br><br><br><br><br>
+        <br><br><br><br><br><br><br><br><br><br><br><br>
+        <br><br><br><br><br><br><br><br><br><br><br><br>
+    </main>
+    <footer class="col-sd-12 col-ld-12">
+        <article class="footer-inner">
+            
+        </article>
+    </footer>
 </body>
 </html>
