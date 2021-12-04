@@ -6,10 +6,128 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>css-project</title>
     <link rel="stylesheet" href="./css/sd-ldFramework.css">
+    <link rel="stylesheet" href="./css/setting.css">
+    <style>
+        .nav-bar{
+                height: 5rem;
+            }
+        .nav-inner{
+            width: 95%;
+            height: 100%;
+            margin: 0 auto;
+                /* background-color: aqua; */
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .registration-btn{
+            width:11rem;
+            height: 70%;
+            border: 1px solid var(--feature-color);
+            font-family: mrt-barlow,sans-serif;
+            border-radius: 5px;
+            display: flex;
+            flex-wrap: nowrap;
+            justify-content: space-around;
+            align-items: center;
+            cursor: pointer;
+        }
+        .registration-btn>img{
+            width: 20%;
+            height: auto;
+        }
+        nav{
+            width: 15rem;
+            height: 50%;
+            /* background-color: brown; */
+            display: flex;
+            flex-wrap: nowrap;
+            justify-content: space-around;
+            align-items: center;
+        }
+        nav>a>img{width: 60%;height: auto;}
+        @media (max-width:967px){
+            .scene{
+                width: 100%;
+                height: 60vh;
+                background:url("Assets/pictures/ferrari-headset1.jpg") no-repeat center center;
+                background-size: cover;
+            }
+        }
+        @media (min-width:968px){
+            .registration-btn:hover{
+                box-shadow: 0 0 10px 3px var(--feature-color) , 0 0 5px 2px #808080 inset;
+                transition: all .25s;
+            }
+            .scene{
+                width: 100%;
+                height: 100vh;
+                background:url("Assets/pictures/ferrari-headset1.jpg") no-repeat center center;
+                background-size: cover;
+            }
+            figure{position: relative;}
+            .slider{
+                width: 100%;
+                height: 3rem;
+                position: absolute;
+                top: 50%;
+                /* background-color: chartreuse; */
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+            }
+            .slider>div{
+                width: 3rem;
+                height: 4rem;
+                font-size: 180%;
+                font-weight: bold;
+                color: #ffffff;
+                cursor: pointer;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                transition: all .3s;
+            }
+            .next-slide{
+                background-color: var(--slider-thumb-background-color-opaHaf);
+                border-top-right-radius:40% ;
+                border-bottom-right-radius:40% ;
+            }
+            .previous-slide{
+                background-color: var(--slider-thumb-background-color-opaHaf);
+                border-top-left-radius:40% ;
+                border-bottom-left-radius:40% ;
+            }
+            .next-slide:hover{background-color: var(--slider-thumb-background-color-opa1);}
+            .previous-slide:hover{background-color: var(--slider-thumb-background-color-opa1);}
+
+        }
+    </style>
 </head>
 <body>
     <header>
-        
+        <section class="nav-bar col-sd-12 col-ld-12">
+            <div class="nav-inner">
+                <button class="registration-btn">
+                    <p>Registration<b>/</b>Sign in</p>
+                    <img src="./Assets/icons/icons8-add-user-male-52.png" alt="registration-pic">
+                </button>
+                <nav>
+                    <a href="#"><img src="./Assets/icons/icons8-search-48.png" alt="search-icon"></a>
+                    <a href="#" title="Home"><img src="./Assets/icons/icons8-home-page-48.png" alt="home-icon"></a>
+                    <a href="#" title="Purchasing"><img src="./Assets/icons/icons8-buying-48.png" alt="purchasing-icon"></a>
+                    <a href="#" title="My account"><img src="./Assets/icons/icons8-user-48.png" alt="my-account-icon"></a>
+                </nav>  
+            </div>
+            <figure>
+                <div class="scene"></div>
+                <div class="slider">
+                    <div class="next-slide" title="Next"><</div>
+                    <div class="previous-slide" title="Pre">></div>
+                </div>
+            </figure>
+        </section>
     </header>
     <main></main>
     <footer></footer>
