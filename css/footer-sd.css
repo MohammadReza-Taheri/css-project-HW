@@ -1,0 +1,43 @@
+@media(max-width:967px){
+    footer{
+        background-color: var(--footer-background-color);
+        height: 30rem;
+        font-family: mrt-barlow,sans-serif;
+        color: white;
+    }
+    .footer-inner{
+        width: 90%;
+        height: 90%;
+        margin: 5% 5%;
+        /* background-color: brown; */
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+    }
+    footer>article>.txt{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+    }
+    .footer-inner>.communication{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+    }
+    .icon-container{
+        width: 60%;
+        height: 2.5rem;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+
+    }
+    .icon-container>a>img{
+        width: 2rem;
+        height: auto;
+
+    }
+}

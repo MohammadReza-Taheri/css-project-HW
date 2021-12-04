@@ -10,40 +10,10 @@
     <link rel="stylesheet" href="./css/home-header-css-shared.css">
     <link rel="stylesheet" href="./css/home-header-css-sd.css">
     <link rel="stylesheet" href="./css/home-header-css-ld.css">
+    <link rel="stylesheet" href="./css/footer-sd.css">
+    <link rel="stylesheet" href="./css/footer-ld.css">
     <style>
-        @media(max-width:967px){
-            footer{
-                background-color: var(--footer-background-color);
-                height: 30rem;
-                font-family: mrt-barlow,sans-serif;
-            }
-            .footer-inner{
-                width: 90%;
-                height: 90%;
-                margin: 5% 5%;
-                background-color: brown;
-            }
-        }
-        /*********************************************/
-        @media(min-width:968px){
-            footer{
-                background-color: var(--footer-background-color);
-                height: 25rem;
-                font-family: mrt-barlow,sans-serif;
-                position: relative;
-            }
-            .footer-inner{
-                width: 90%;
-                height: 90%;
-                /* background-color: brown; */
-                position: absolute;
-                left: 50%;
-                top: 50%;
-                transform: translate(-50%,-50%);
-            }
-        }
-       
-       
+        
     </style>
 </head>
 <body>
@@ -80,7 +50,19 @@
     </main>
     <footer class="col-sd-12 col-ld-12">
         <article class="footer-inner">
-            
+            <div class="txt">
+                <h3 class="title">About us</h3>
+                <p class="context">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Atque quam nemo dolorum debitis maxime laudantium veniam enim doloremque fugit sapiente odit illo aliquam, possimus corporis consequatur, sequi amet quos libero delectus reprehenderit nisi placeat natus. Beatae, non libero maiores ducimus praesentium hic quo tempore officia adipisci quasi rem dolor quae eligendi soluta aperiam at aliquid nesciunt sed repellat nostrum, dolores minus maxime unde animi. Officiis, totam ab soluta culpa quisquam quia eaque nihil iusto beatae a, cumque commodi expedita qui odit illum dolores praesentium itaque ut voluptatibus doloremque aspernatur reiciendis dolor deserunt! Dolorum ipsum id iusto iure nulla corporis voluptate.</p>
+            </div>
+            <div class="communication">
+                <h3>Follow us on social media</h3>
+                <div class="icon-container">
+                    <a href="#"><img src="./Assets/icons/footer/icons8-twitter-60.png" alt="twitter-icon"></a>
+                    <a href="#"><img src="./Assets/icons/footer/icons8-instagram-48.png" alt="instagram-icon"></a>
+                    <a href="#"><img src="./Assets/icons/footer/icons8-linkedin-48.png" alt="linkedin-icon"></a>
+                    <a href="#"><img src="./Assets/icons/footer/icons8-telegram-app-96.png" alt="telegram-icon"></a>
+                </div>
+            </div>
         </article>
     </footer>
 </body>
