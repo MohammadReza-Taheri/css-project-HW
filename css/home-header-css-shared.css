@@ -1,0 +1,39 @@
+.nav-bar{
+                height: 5rem;
+            }
+        .nav-inner{
+            width: 95%;
+            height: 100%;
+            margin: 0 auto;
+                /* background-color: aqua; */
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .registration-btn{
+            width:11rem;
+            height: 70%;
+            border: 1px solid var(--feature-color);
+            font-family: mrt-barlow,sans-serif;
+            border-radius: 5px;
+            display: flex;
+            flex-wrap: nowrap;
+            justify-content: space-around;
+            align-items: center;
+            cursor: pointer;
+        }
+        .registration-btn>img{
+            width: 20%;
+            height: auto;
+        }
+        nav{
+            width: 15rem;
+            height: 50%;
+            /* background-color: brown; */
+            display: flex;
+            flex-wrap: nowrap;
+            justify-content: space-around;
+            align-items: center;
+        }
+        nav>a>img{width: 60%;height: auto;}

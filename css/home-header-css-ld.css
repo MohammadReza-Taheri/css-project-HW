@@ -1,0 +1,48 @@
+@media (min-width:968px){
+    .registration-btn:hover{
+        box-shadow: 0 0 10px 3px var(--feature-color) , 0 0 5px 2px #808080 inset;
+        transition: all .25s;
+    }
+    .scene{
+        width: 100%;
+        height: 100vh;
+        background:url("../Assets/pictures/ferrari-headset1.jpg") no-repeat center center;
+        background-size: cover;
+    }
+    figure{position: relative;}
+    .slider{
+        width: 100%;
+        height: 3rem;
+        position: absolute;
+        top: 50%;
+        /* background-color: chartreuse; */
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .slider>div{
+        width: 3rem;
+        height: 4rem;
+        font-size: 180%;
+        font-weight: bold;
+        color: #ffffff;
+        cursor: pointer;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: all .3s;
+    }
+    .next-slide{
+        background-color: var(--slider-thumb-background-color-opaHaf);
+        border-top-right-radius:40% ;
+        border-bottom-right-radius:40% ;
+    }
+    .previous-slide{
+        background-color: var(--slider-thumb-background-color-opaHaf);
+        border-top-left-radius:40% ;
+        border-bottom-left-radius:40% ;
+    }
+    .next-slide:hover{background-color: var(--slider-thumb-background-color-opa1);}
+    .previous-slide:hover{background-color: var(--slider-thumb-background-color-opa1);}
+
+}
