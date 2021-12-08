@@ -2,7 +2,7 @@
     .scene{
         width: 100%;
         height: 60vh;
-        background:url("../Assets/pictures/ferrari-headset1.jpg") no-repeat center center;
+        background:url("../Assets/pictures/ferrariHeadset/ferrari-headset1.jpg") no-repeat center center;
         background-size: cover;
     }
 }
