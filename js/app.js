@@ -18,6 +18,37 @@ let hfData=[
     {id:"HS-5",model:"Sony-GA-100-1",pic:"Assets/pictures/HS/sony-GA-100.jpg",price:102,rank:4,spacialOffer:true}
 ];
 
+
+
+// "use strict"
+
+// if (document.querySelector("#ch")) {
+//     alert("search tag existed")
+// }
+
+if (document.querySelector(".fig")) {
+    picAnimation(true)
+}
+
+    document.querySelector(".slider").addEventListener("click",(e)=>{
+        console.log("zert");
+        if (e.target.classList.contains("left")) {
+            sliderChanger(-1);
+        }
+        else if (e.target.classList.contains("right")) {
+            sliderChanger(1);
+        }
+    }) 
+
+
+
+
+
+
+
+
+
+
 hsData.forEach((item,index)=>{
     let tempMaker=new TemplateMaker(hsData[index].model,hsData[index].pic,hsData[index].price,hsData[index].rank,hsData[index].spacialOffer);
     tempMaker.padMaker("hs");

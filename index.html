@@ -13,10 +13,11 @@
     <link rel="stylesheet" href="./css/footer-sd.css">
     <link rel="stylesheet" href="./css/footer-ld.css">
     <link rel="stylesheet" href="./css/main-sd.css">
-    <link rel="stylesheet" href="./css/footer-ld.css">
+    <link rel="stylesheet" href="./css/main-ld.css">
     
 </head>
 <body>
+    <!--------Hello friends. I didn't use "window.addEventListener("resize",...) . Please refresh the browser page after resizing to reset. Thanks a lot :) -->
     <header>
         <section class="nav-bar col-sd-12 col-ld-12">
             <div class="nav-inner">
@@ -35,10 +36,10 @@
     </header>
     <main>
         <figure>
-            <div class="scene"></div>
+            <div class="scene fig"></div>
             <div class="slider">
-                <div class="next-slide visible-ld" title="Next">&lt</div>
-                <div class="previous-slide visible-ld" title="Pre">></div>
+                <div class="left next-slide visible-ld" title="Next">&lt</div>
+                <div class="right previous-slide visible-ld" title="Pre">></div>
             </div>
         </figure>
         <!----------------------------------------------------------->
@@ -66,6 +67,7 @@
         </article>
     </footer>
     <script src="./js/template-maker.js"></script>
+    <script src="./js/slide-chenger.js"></script>
     <script src="./js/app.js"></script>
 </body>
 </html>
