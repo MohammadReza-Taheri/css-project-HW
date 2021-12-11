@@ -1,0 +1,43 @@
+@media(min-width:968px){
+    body{
+        overflow-x: hidden;
+    }
+    .headset{
+        width: auto;
+        min-width: 100%;
+        height: 25rem;
+        flex-wrap:nowrap;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        
+    }
+    /******************************************************handsfree********/
+     .handsfree{
+        width: auto;
+        min-width: 100%;
+        height: 25rem;
+        
+     }
+     
+     .handsfree>p{
+        font-family:sans-serif;
+        text-decoration: underline orange ;
+        font-weight: bold;
+        font-size: 110%;
+        margin: 2px 2rem;
+     }
+     .inner-handsfree{
+        width: 2000px;
+        height: 90%;
+        /* background-color: orchid; */
+        display: flex;
+        /* justify-content: space-around; */
+        align-items: center;
+     }
+     .inner-handsfree>div{
+         margin-right:5px ;
+     }
+    
+} 

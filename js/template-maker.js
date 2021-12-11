@@ -1,17 +1,26 @@
 class TemplateMaker{
-    constructor(starNumber,spacialOfferSituation){
+    constructor(caption="",src="",cost=0,starNumber=0,spacialOfferSituation=false){
+        this.caption=caption;
+        this.cost=cost;
+        this.src=src;
         this.starNumber=starNumber;
         this.spacialOfferSituation=spacialOfferSituation;
     }
-    padMaker(){
+    padMaker(row){
         let pad=document.createElement("DIV");
-        pad.style.width="20%";
-        pad.style.height="90%";
-        // div.style.marginTop="5%";
+        pad.setAttribute("class","pad");
+        if(document.documentElement.scrollWidth>967){
+            pad.style.width="20%";
+            pad.style.height="90%";
+        }else{
+            pad.style.width="80%";
+            pad.style.height="30rem";
+            pad.style.margin="10px auto";
+        }
+        
         pad.style.backgroundColor="white";
         pad.style.boxShadow="0 0 10px 3px gray";
         pad.style.display="flex";
-        // div.style.flexDirection="column";
         pad.style.justifyContent="center";
         pad.style.alignItems="center";
         /*********************************/
@@ -34,30 +43,26 @@ class TemplateMaker{
         img.style.width="100%";
         img.style.height="100%";
         img.setAttribute("alt","production-pic");
-        img.setAttribute("src","../Assets/pictures/ferrariHeadset/ferrari-headset2.jpg"); /*-------------------*/
+        img.setAttribute("src",`${this.src}`);                                     /*----------this.src---------*/
         fig.appendChild(img);
         /***********************************/
         let figCap=document.createElement("FIGCAPTION");
-        figCap.textContent="Figcaption content";
+        figCap.textContent=`${this.caption}`;
         figCap.style.display="flex";
         figCap.style.flexWrap="nowrap";
         figCap.style.justifyContent="center";
         figCap.style.alignItems="center";
         figCap.style.width="100%";
         figCap.style.height="10%";
-        // figCap.style.backgroundColor="blue";
         figCap.style.fontFamily="sans-serif";
-        // figCap.style.fontSize="110%";
         div.appendChild(figCap);
         /*************************************/
         let containerDiv=document.createElement("DIV");
         containerDiv.style.width="100%";
         containerDiv.style.height="25%";
-        // containerDiv.style.backgroundColor="green";
         let innerDiv=document.createElement("DIV");
         let price=document.createElement("P");
-        let x="0000";
-        price.innerText=`${x} USD`;                               /*------------------------------------------*/
+        price.innerText=`${this.cost} USD`;                               /*------------------price------------------------*/
         price.style.position="absolute";
         price.style.bottom="0";
         price.style.right="0";
@@ -72,12 +77,13 @@ class TemplateMaker{
         likePurchase.style.display="flex";
         likePurchase.style.justifyContent="flex-start";
         likePurchase.style.alignItems="center";
-
-        // likePurchase.style.backgroundColor="pink";
         likePurchase.style.width="55%";
         /***********************************/
         let purchase=document.createElement("DIV");
-        purchase.setAttribute("class","purchase");
+        let x=document.createAttribute("class");
+        x.value="purchase";
+        purchase.setAttributeNode(x);
+        purchase.style.transition="all .3s";
         purchase.style.width="auto";
         purchase.style.minWidth="2.5rem";
         purchase.style.height="70%";
@@ -92,7 +98,7 @@ class TemplateMaker{
         purchaseIcon.style.height="auto";
         purchase.appendChild(purchaseIcon);
         let purchaseTxt=document.createElement("P");
-        purchaseTxt.textContent="Favorite";
+        purchaseTxt.textContent="Purchase";
         purchaseTxt.style.color="white";
         purchaseTxt.style.display="none";
         purchase.style.marginRight="1px";
@@ -105,6 +111,7 @@ class TemplateMaker{
         favorite.style.minWidth="2.5rem";
         favorite.style.height="70%";
         favorite.style.borderRadius="50px";
+        favorite.style.transition="all .3s";
         favorite.style.backgroundColor="green";
         favorite.style.display="flex";
         favorite.style.justifyContent="space-around";
@@ -132,7 +139,7 @@ class TemplateMaker{
         starBox.style.justifyContent="flex-start";
         starBox.style.alignItems="center";
         starBox.style.zIndex="5";
-        for(let i=0;i<=2;i++){                        /*---------------------------------this.starNumber-----------------*/
+        for(let i=0;i<=this.starNumber;i++){                        /*---------------------------------this.starNumber-----------------*/
             let star=document.createElement("IMG");
             star.setAttribute("src","./Assets/icons/main/icons8-star-filled-96.png");
             star.style.width="1.5rem";
@@ -167,6 +174,18 @@ class TemplateMaker{
         div.appendChild(containerDiv);
         /**************************************/
         pad.appendChild(div);
-        document.querySelector(".headset").appendChild(pad);
+        if (row==="hs") {
+            document.querySelector(".headset").appendChild(pad);
+        }else{
+            document.querySelector(".handsfree").children[1].appendChild(pad);
+        }
+        
     }
+    // sectionMaker(num){
+    //     let div=document.createElement("DIV");
+    //     div.setAttribute("class",`part p${num}`)
+    //     div.style.width="100%";
+    //     div.style.height="90%";
+    //     div.style.backgroundColor="yellow";
+    // }
 }

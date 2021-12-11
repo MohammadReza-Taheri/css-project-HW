@@ -1,0 +1,40 @@
+@media(max-width:967px){
+    .headset{
+           width: auto;
+           min-width: 100%;
+           height: auto;
+           display: flex;
+           flex-direction:column;
+           justify-content: space-around;
+           align-items: center;
+           
+       }
+       .handsfree{
+           width: auto;
+           min-width: 100%;
+           height: auto;
+           display: flex;
+           flex-direction: column;
+           justify-content: center;
+           align-items: center;
+        }
+        .handsfree>p{
+           font-family:sans-serif;
+           /* text-decoration: underline orange ; */
+           border-bottom: 10px solid orange;
+           font-weight: bold;
+           font-size: 200%;
+           margin: 2px 2rem;
+        }
+        .inner-handsfree{
+           width: 100%;
+           height: auto;
+           /* background-color: orchid; */
+           display: flex;
+           flex-direction: column;
+           /* justify-content: space-around; */
+           align-items: center;
+           justify-content: center;
+        }
+        
+   }
