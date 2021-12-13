@@ -6,16 +6,19 @@ class TemplateMaker{
         this.starNumber=starNumber;
         this.spacialOfferSituation=spacialOfferSituation;
     }
-    padMaker(row){
+    padMaker(row,sectionCounter){
         let pad=document.createElement("DIV");
         pad.setAttribute("class","pad");
         if(document.documentElement.scrollWidth>967){
             pad.style.width="20%";
             pad.style.height="90%";
+            pad.style.margin="10px 35px"
+            pad.style.float="left";
         }else{
             pad.style.width="80%";
             pad.style.height="30rem";
             pad.style.margin="10px auto";
+           
         }
         
         pad.style.backgroundColor="white";
@@ -177,15 +180,47 @@ class TemplateMaker{
         if (row==="hs") {
             document.querySelector(".headset").appendChild(pad);
         }else{
-            document.querySelector(".handsfree").children[1].appendChild(pad);
+            if (document.documentElement.scrollWidth>967) {
+                document.querySelector(".inner-handsfree").lastElementChild.appendChild(pad);
+            }else{
+                document.querySelector(".handsfree").appendChild(pad);
+            }
+            
         }
         
     }
-    // sectionMaker(num){
-    //     let div=document.createElement("DIV");
-    //     div.setAttribute("class",`part p${num}`)
-    //     div.style.width="100%";
-    //     div.style.height="90%";
-    //     div.style.backgroundColor="yellow";
-    // }
+    sectionMaker(num){
+        let div=document.createElement("DIV");
+        div.setAttribute("class",`part p${num}`);
+        // div.style.backgroundColor=`rgb(${Math.round(Math.random()*100)},${Math.round(Math.random()*100)},${Math.round(Math.random()*100)})`
+        div.style.width="100%";
+        div.style.height="90%";
+        div.style.display="flex";
+        div.style.justifyContent="space-around";
+        div.style.alignItems="center";
+        div.style.margin="1px";
+        div.style.display="none";
+        let dot=this.dotGenerator(num);
+        document.getElementsByClassName("dot-container")[0].appendChild(dot);
+        document.querySelector(".inner-handsfree").appendChild(div);
+    }
+    dotGenerator(n){
+        let div=document.createElement("DIV");
+        div.setAttribute("class",`dot-${n} dot`);
+        div.style.width="10px";
+        div.style.height="10px";
+        div.style.margin="0 10px";
+        div.style.backgroundColor="gray";
+        div.style.borderRadius="50%";
+        return div;
+    }
+    dotHover(e){
+        document.querySelectorAll(".dot").forEach(item=>{
+            item.style.width="10px";
+            item.style.height="10px";
+        })
+        e.target.style.width="15px";
+        e.target.style.height="15px";
+        // e.target.style.backgroundColor="rgb(44, 61, 92)";
+    }
 }
